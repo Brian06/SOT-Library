@@ -1,28 +1,11 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve('dist')
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/, 
-        loader: "babel-loader",
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' }
-        ],
-      },
-    ]
-  },
-  plugins: [new MiniCssExtractPlugin()],
+module.exports = function(env) {
+  if (env && env.appProd) {
+    return require('./webpack.config.app.prod.js');
+  } else if (env && env.appDev) {
+    return require('./webpack.config.app.dev.js');
+  } else if (env && env.css) {
+    return require('./webpack.config.css-library.js');
+  } else if (env && env.js) {
+    return require('./webpack.config.js-library.js');
+  }
 };
