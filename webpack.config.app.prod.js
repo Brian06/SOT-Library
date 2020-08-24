@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -29,6 +30,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: 'css/main.css' }),
     new HtmlWebpackPlugin({ inject: true, template: 'src/ExampleApp/index.html' }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
     new RemovePlugin({
       before: {
         include: ['./dist/App']

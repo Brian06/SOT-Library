@@ -1,13 +1,15 @@
 .bv-btn {
   border: 0;
+  cursor: pointer;
   display: inline-block;
   background: #81B44C;
+  line-height: normal;
   color: #FFF;
   border-radius: 6px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  font-size: 24px;
-  padding: 18px 30px;
+  font-size: 26px;
+  padding: 15px 30px;
   text-align: center;
   -webkit-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
@@ -42,11 +44,6 @@
     }
   }
 
-  &--small {
-    padding: 10px 20px;
-    font-size: 18px;
-  }
-
   /* Secondary Button */
   &--secondary {
     background: #4A3B8F;
@@ -74,12 +71,20 @@
       background: #81B44C;
     }
 
-    &--small {
-      font-size: 16px;
-      padding: 8px 15px;
+    &--inverse {
+      color: #fff;
+      border-color: #81B44C;
+
+      &:hover {
+        background-color: #81B44C;
+      }
+
+      &:focus {
+        opacity: 0.75;
+      }
     }
 
-    &--inverse {
+    &--white {
       color: #fff;
       border-color: #fff;
 
@@ -92,6 +97,11 @@
         opacity: 0.75;
       }
     }
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 15px;
   }
 }
 
