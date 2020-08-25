@@ -1,0 +1,22 @@
+.element-card {
+  border-radius: 6px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+
+  &--purple {
+    background: linear-gradient(to right, #353167 10%,#4a3b8f 100%);
+  }
+
+  &__secondary-title {
+    color: #FFF;
+  }
+
+  &__code-tex {
+    resize: none;
+    background-color: #f8f9fa;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+

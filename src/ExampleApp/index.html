@@ -9,7 +9,215 @@
 </head>
 
 <body>
-  <button class="js-test-button bv-btn bv-btn--tertiary bv-btn--mobile-fluid">Search</button>
+  <header>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-brand" href="#">SOT Library</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle active js-BeenVerified-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              BeenVerified
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="list-group js-BeenVerified-list" role="tablist">
+                <a class="list-item active" data-toggle="list" href="#BV-buttons" role="tab">- Buttons</a>
+                <a class="list-item" data-toggle="list" href="#BV-inputs" role="tab">- Inputs</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle js-PeopleLooker-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PeopleLooker
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="list-group js-PeopleLooker-list" role="tablist">
+                <a class="list-item" data-toggle="list" href="#PL-buttons" role="tab">- Buttons</a>
+                <a class="list-item" data-toggle="list" href="#PL-inputs" role="tab">- Inputs</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle js-JavaScript-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                JavaScript
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="list-group js-JavaScript-list" role="tablist">
+                  <a class="list-item" data-toggle="list" href="#JS-browser" role="tab">- Browser</a>
+                  <a class="list-item" data-toggle="list" href="#JS-validations" role="tab">- Validations</a>
+                  <a class="list-item" data-toggle="list" href="#JS-misc" role="tab">- Misc</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fliud">
+    <div class="row mx-0">
+      <!-- SIDE BAR -->
+      <div class="d-none d-lg-block col-3 pl-0">
+        <div class="d-flex flex-column border side-bar">
+          <h5 class="text-center mb-3">Select for Search</h5>
+          <div class="mb-2">
+            <a class="list-title js-BeenVerified-nav" data-toggle="collapse" href="#BeenVerified-Clases" role="button" aria-expanded="false" aria-controls="BeenVerified-Clases">
+              BeenVerified >
+            </a>
+            <div class="collapse" id="BeenVerified-Clases">
+              <div class="list-group js-BeenVerified-list" role="tablist">
+                <a class="list-item active" data-toggle="list" href="#BV-buttons" role="tab">- Buttons</a>
+                <a class="list-item" data-toggle="list" href="#BV-inputs" role="tab">- Inputs</a>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <a class="list-title js-PeopleLooker-nav" data-toggle="collapse" href="#PeopleLooker-Clases" role="button" aria-expanded="false" aria-controls="PeopleLooker-Clases">
+              PeopleLooker >
+            </a>
+            <div class="collapse" id="PeopleLooker-Clases">
+              <div class="list-group js-PeopleLooker-list" role="tablist">
+                <a class="list-item" data-toggle="list" href="#PL-buttons" role="tab">- Buttons</a>
+                <a class="list-item" data-toggle="list" href="#PL-inputs" role="tab">- Inputs</a>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <a class="list-title js-JavaScript-nav" data-toggle="collapse" href="#JS-Functions" role="button" aria-expanded="false" aria-controls="JS-Functions">
+              JavaScript >
+            </a>
+            <div class="collapse" id="JS-Functions">
+              <div class="list-group js-JavaScript-list" role="tablist">
+                <a class="list-item" data-toggle="list" href="#JS-browser" role="tab">- Browser</a>
+                <a class="list-item" data-toggle="list" href="#JS-validations" role="tab">- Validations</a>
+                <a class="list-item" data-toggle="list" href="#JS-misc" role="tab">- Misc</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="col-12 col-lg-9 pl-lg-0">
+        <div class="tab-content" id="nav-tabContent">
+
+          <!-- BeenVerified Clases -->
+          <!-- Buttons -->
+          <div class="tab-pane fade show active" id="BV-buttons" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">BV Buttons</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">Primary Buttons</h5>
+                <div class="mb-3">
+                  <button class="bv-btn">Search</button>
+                  <button class="bv-btn bv-btn--small">Search</button>
+                </div>
+                <textarea class="element-card__code-tex" rows="3">
+<button class="bv-btn">Search</button>
+<button class="bv-btn bv-btn--small">Search</button>
+                </textarea>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">Secondary Buttons</h5>
+                <div class="mb-3">
+                  <button class="bv-btn bv-btn--secondary">Search</button>
+                  <button class="bv-btn bv-btn--secondary bv-btn--small">Search</button>
+                </div>
+                <textarea class="element-card__code-tex" rows="3">
+<button class="bv-btn bv-btn--secondary">Search</button>
+<button class="bv-btn bv-btn--secondary bv-btn--small">Search</button>
+                </textarea>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">Tertiary Buttons</h5>
+                <div class="mb-3">
+                  <button class="bv-btn bv-btn--tertiary">Search</button>
+                  <button class="bv-btn bv-btn--tertiary bv-btn--small">Search</button>
+                </div>
+                <textarea class="element-card__code-tex" rows="3">
+<button class="bv-btn bv-btn--tertiary">Search</button>
+<button class="bv-btn bv-btn--tertiary bv-btn--small">Search</button>
+                </textarea>
+              </div>
+              <div class="element-card element-card--purple mb-5 p-3">
+                <h5 class="mb-4 element-card__secondary-title">Tertiary Inverse Buttons</h5>
+                <div class="mb-3">
+                  <button class="bv-btn bv-btn--tertiary bv-btn--tertiary--inverse">Search</button>
+                  <button class="bv-btn bv-btn--tertiary bv-btn--tertiary--inverse bv-btn--small">Search</button>
+                </div>
+                <textarea class="element-card__code-tex" rows="3">
+<button class="bv-btn bv-btn--tertiary bv-btn--tertiary--inverse">Search</button>
+<button class="bv-btn bv-btn--tertiary bv-btn--tertiary--inverse bv-btn--small">Search</button>
+                </textarea>
+              </div>
+              <div class="element-card element-card--purple mb-5 p-3">
+                <h5 class="mb-4 element-card__secondary-title">Tertiary White Buttons</h5>
+                <div class="mb-3">
+                  <button class="bv-btn bv-btn--tertiary bv-btn--tertiary--white">Search</button>
+                  <button class="bv-btn bv-btn--tertiary bv-btn--tertiary--white bv-btn--small">Search</button>
+                </div>
+                <textarea class="element-card__code-tex" rows="3">
+<button class="bv-btn bv-btn--tertiary bv-btn--tertiary--white">Search</button>
+<button class="bv-btn bv-btn--tertiary bv-btn--tertiary--white bv-btn--small">Search</button>
+                </textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inputs -->
+          <div class="tab-pane fade" id="BV-inputs" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">BV Inputs</h2>
+            </div>
+          </div>
+
+          <!-- PeopleLooker Clases -->
+          <!-- Buttons -->
+          <div class="tab-pane fade" id="PL-buttons" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">PL Buttons</h2>
+            </div>
+          </div>
+
+          <!-- Inputs -->
+          <div class="tab-pane fade" id="PL-inputs" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">PL Inputs</h2>
+            </div>
+          </div>
+
+          <!-- JAVASCRIPT FUNCTIONS -->
+          <!-- Browser -->
+          <div class="tab-pane fade" id="JS-browser" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Browser Functions</h2>
+            </div>
+          </div>
+
+          <!-- Validations -->
+          <div class="tab-pane fade" id="JS-validations" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Validations Functions</h2>
+            </div>
+          </div>
+
+           <!-- Miscellaneous -->
+           <div class="tab-pane fade" id="JS-misc" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Miscellaneous Functions</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

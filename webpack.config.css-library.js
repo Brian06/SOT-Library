@@ -4,11 +4,11 @@ const RemovePlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/CSSLibrary/index.js',
+  entry: './src/CSSLibrary',
   entry: {
-    main: './src/CSSLibrary/index.js',
-    BeenVerified: './src/CSSLibrary/BeenVerified/index.js',
-    PeopleLooker: './src/CSSLibrary/PeopleLooker/index.js',
+    main: './src/CSSLibrary',
+    BeenVerified: './src/CSSLibrary/BeenVerified',
+    PeopleLooker: './src/CSSLibrary/PeopleLooker',
   },
   output: {
     path: path.resolve('dist/CSS-Library')

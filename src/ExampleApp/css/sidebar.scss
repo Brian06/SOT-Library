@@ -1,0 +1,17 @@
+.side-bar {
+  height: 100%;
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+
+.list-title {
+  color: #4A4A4A;
+
+  &:hover,
+  &.active {
+    color: #4A4A4A;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
