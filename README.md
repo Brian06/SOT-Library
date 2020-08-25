@@ -11,7 +11,10 @@ SOT Library is a library with the most used JS functions in prepaywall flows in 
 ## Setup & Run
 **npm install** to install all the dependecies. 
 
-**Run APP:** npm run start-app
-**Build APP:** npm run build-app
-**Build CSS Library:** npm run build-CSS
-**Run JS Library:** npm run build-JS
+**Run APP:** npm run start-app.
+
+**Build APP:** npm run build-app.
+
+**Build CSS Library:** npm run build-CSS.
+
+**Run JS Library:** npm run build-JS.
