@@ -17,4 +17,9 @@ SOT Library is a library with the most used JS functions in prepaywall flows in 
 
 **Build CSS Library:** npm run build-CSS.
 
-**Run JS Library:** npm run build-JS.
+**Build JS Library:** npm run build-JS.
+
+## Update to npm
+
+Pending..
+
