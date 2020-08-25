@@ -3,7 +3,7 @@ const RemovePlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/JSLibrary/index.js',
+  entry: './src/JSLibrary',
   output: {
     filename: 'bundle.js',
     path: path.resolve('dist/JS-Library')

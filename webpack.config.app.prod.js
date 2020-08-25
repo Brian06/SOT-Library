@@ -6,7 +6,7 @@ const RemovePlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/ExampleApp/index.js',
+  entry: './src/ExampleApp',
   output: {
     filename: 'js/bundle.js',
     path: path.resolve('dist/App')
@@ -36,7 +36,7 @@ module.exports = {
     }),
     new RemovePlugin({
       before: {
-        include: ['./dist/App']
+        include: ['./dist/App', './dist/App.zip']
       }
     })
   ],
