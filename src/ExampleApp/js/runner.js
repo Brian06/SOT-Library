@@ -1,13 +1,22 @@
-const activeClassesFunctionality = () => {
-  $('.js-BeenVerified-list a, .js-PeopleLooker-list a').on('click', (e) => {
+const activeClassesHandler = () => {
+  const optionsSelectors = [
+    '.js-BeenVerified-list a',
+    '.js-PeopleLooker-list a',
+    '.js-JavaScript-list a',
+  ];
+  const selectors = optionsSelectors.join(', ');
+
+  $(selectors).on('click', (e) => {
     const currentElement = e.currentTarget;
     const currentHash = currentElement.hash;
     const currentParent = $(currentElement).parent().parent().parent().find("a").eq(0);
     const selectorsToChange = [
-      '.js-BeenVerified-list a',
-      '.js-PeopleLooker-list a',
       '.js-BeenVerified-nav',
-      '.js-PeopleLooker-nav'
+      '.js-BeenVerified-list a',
+      '.js-PeopleLooker-nav',
+      '.js-PeopleLooker-list a',
+      '.js-JavaScript-nav',
+      '.js-JavaScript-list a',
     ];
     const selectors = selectorsToChange.join(', ');
     $(currentElement).tab('show');
@@ -18,12 +27,14 @@ const activeClassesFunctionality = () => {
       $('.js-BeenVerified-nav').addClass('active');
     } else if (currentParent.hasClass('js-PeopleLooker-nav')) {
       $('.js-PeopleLooker-nav').addClass('active');
+    } else if (currentParent.hasClass('js-JavaScript-nav')) {
+      $('.js-JavaScript-nav').addClass('active');
     }
   });
 }
 
 const initialize = () => {
-  activeClassesFunctionality();
+  activeClassesHandler();
 }
 
 export { initialize };

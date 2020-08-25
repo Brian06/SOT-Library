@@ -42,7 +42,22 @@
             </div>
           </li>
         </ul>
-        <div class="navbar-nav"><a class="nav-link" href="#">JavaScript</a></div>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle js-JavaScript-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                JavaScript
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="list-group js-JavaScript-list" role="tablist">
+                  <a class="list-item" data-toggle="list" href="#JS-browser" role="tab">- Browser</a>
+                  <a class="list-item" data-toggle="list" href="#JS-validations" role="tab">- Validations</a>
+                  <a class="list-item" data-toggle="list" href="#JS-misc" role="tab">- Misc</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -52,7 +67,6 @@
       <div class="d-none d-lg-block col-3 pl-0">
         <div class="d-flex flex-column border side-bar">
           <h5 class="text-center mb-3">Select for Search</h5>
-          <div class="mb-2">JavaScript</div>
           <div class="mb-2">
             <a class="list-title js-BeenVerified-nav" data-toggle="collapse" href="#BeenVerified-Clases" role="button" aria-expanded="false" aria-controls="BeenVerified-Clases">
               BeenVerified >
@@ -72,6 +86,18 @@
               <div class="list-group js-PeopleLooker-list" role="tablist">
                 <a class="list-item" data-toggle="list" href="#PL-buttons" role="tab">- Buttons</a>
                 <a class="list-item" data-toggle="list" href="#PL-inputs" role="tab">- Inputs</a>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <a class="list-title js-JavaScript-nav" data-toggle="collapse" href="#JS-Functions" role="button" aria-expanded="false" aria-controls="JS-Functions">
+              JavaScript >
+            </a>
+            <div class="collapse" id="JS-Functions">
+              <div class="list-group js-JavaScript-list" role="tablist">
+                <a class="list-item" data-toggle="list" href="#JS-browser" role="tab">- Browser</a>
+                <a class="list-item" data-toggle="list" href="#JS-validations" role="tab">- Validations</a>
+                <a class="list-item" data-toggle="list" href="#JS-misc" role="tab">- Misc</a>
               </div>
             </div>
           </div>
@@ -164,6 +190,28 @@
           <div class="tab-pane fade" id="PL-inputs" role="tabpanel">
             <div class="text-center">
               <h2 class="my-4">PL Inputs</h2>
+            </div>
+          </div>
+
+          <!-- JAVASCRIPT FUNCTIONS -->
+          <!-- Browser -->
+          <div class="tab-pane fade" id="JS-browser" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Browser Functions</h2>
+            </div>
+          </div>
+
+          <!-- Validations -->
+          <div class="tab-pane fade" id="JS-validations" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Validations Functions</h2>
+            </div>
+          </div>
+
+           <!-- Miscellaneous -->
+           <div class="tab-pane fade" id="JS-misc" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">Miscellaneous Functions</h2>
             </div>
           </div>
         </div>
