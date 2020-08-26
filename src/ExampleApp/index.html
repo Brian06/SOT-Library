@@ -26,7 +26,8 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <div class="list-group js-BeenVerified-list" role="tablist">
                 <a class="list-item active" data-toggle="list" href="#BV-buttons" role="tab">- Buttons</a>
-                <a class="list-item" data-toggle="list" href="#BV-inputs" role="tab">- Inputs</a>
+                <a class="list-item" data-toggle="list" href="#BV-radio-buttons" role="tab">- Radio Buttons</a>
+                <a class="list-item" data-toggle="list" href="#BV-checkbox" role="tab">- Checkbox</a>
               </div>
             </div>
           </li>
@@ -68,13 +69,14 @@
         <div class="d-flex flex-column border side-bar">
           <h5 class="text-center mb-3">Select for Search</h5>
           <div class="mb-2">
-            <a class="list-title js-BeenVerified-nav" data-toggle="collapse" href="#BeenVerified-Clases" role="button" aria-expanded="false" aria-controls="BeenVerified-Clases">
+            <a class="list-title js-BeenVerified-nav active" data-toggle="collapse" href="#BeenVerified-Clases" role="button" aria-expanded="false" aria-controls="BeenVerified-Clases">
               BeenVerified >
             </a>
             <div class="collapse" id="BeenVerified-Clases">
               <div class="list-group js-BeenVerified-list" role="tablist">
                 <a class="list-item active" data-toggle="list" href="#BV-buttons" role="tab">- Buttons</a>
-                <a class="list-item" data-toggle="list" href="#BV-inputs" role="tab">- Inputs</a>
+                <a class="list-item" data-toggle="list" href="#BV-radio-buttons" role="tab">- Radio Buttons</a>
+                <a class="list-item" data-toggle="list" href="#BV-checkbox" role="tab">- Checkbox</a>
               </div>
             </div>
           </div>
@@ -171,10 +173,52 @@
             </div>
           </div>
 
-          <!-- Inputs -->
-          <div class="tab-pane fade" id="BV-inputs" role="tabpanel">
+          <!-- Radio Buttons -->
+          <div class="tab-pane fade" id="BV-radio-buttons" role="tabpanel">
             <div class="text-center">
-              <h2 class="my-4">BV Inputs</h2>
+              <h2 class="my-4">BV Radio Buttons</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">Default Radio Button</h5>
+                <div class="mb-3">
+                  <div class="bv-rb">
+                    <input type="radio" id="radio-1" class="bv-rb__radio" checked  name="radio-group">
+                    <label for="radio-1" class="bv-rb__label">Item 1</label>
+                  </div>
+                  <div class="bv-rb">
+                    <input type="radio" id="radio-2" class="bv-rb__radio" name="radio-group">
+                    <label for="radio-2" class="bv-rb__label">Item 2</label>
+                  </div>
+                </div>
+                <textarea class="element-card__code-tex" rows="5">
+<div class="bv-rb">
+  <input type="radio" id="radio-1" class="bv-rb__radio" checked  name="radio-group">
+  <label for="radio-1" class="bv-rb__label">Item 1</label>
+</div>
+                </textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="tab-pane fade" id="BV-checkbox" role="tabpanel">
+            <div class="text-center">
+              <h2 class="my-4">BV Checkbox</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">Default Checkbox</h5>
+                <div class="mb-3">
+                  <div class="bv-cb">
+                    <input type="checkbox" id="cb-1" class="checkbox" checked  name="cb-group">
+                    <label for="cb-1" class="label--cb">Item 1</label>
+                  </div>
+                  <div class="bv-cb">
+                    <input type="checkbox" id="cb-2" class="checkbox" name="cb-group">
+                    <label for="cb-2" class="label--cb">Item 2</label>
+                  </div>
+                </div>
+                <textarea class="element-card__code-tex" rows="5">
+                                        
+                </textarea>
+              </div>
             </div>
           </div>
 
