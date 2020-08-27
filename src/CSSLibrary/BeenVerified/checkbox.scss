@@ -1,0 +1,92 @@
+.bv-cb {
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+
+    &:checked {
+      + label {
+        &:before {
+          border-color: #4A4A4A
+        }
+
+        &:after {
+          opacity: 1;
+          -webkit-transform: scale(1.8);
+          -ms-transform: scale(1.8);
+          transform: scale(1.8);
+        }
+      }
+    }
+
+    &:not(:checked) {
+      + label {
+        &:after {
+          opacity: 0;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+
+      &:hover {
+        + label {
+          &:before {
+            border-color: #99D161;
+          }
+        }
+      }
+    }
+
+    &:disabled {
+      + label {
+        color: #aaa;
+
+        &::before {
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-color: #bbb;
+          background-color: #ddd;
+        }
+      }
+
+      &:checked {
+        + label {
+          &:after {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 20px; height: 20px;
+      border: 2px solid #979797;
+      background: #fff;
+      border-radius: 4px;
+      -webkit-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+    }
+
+    &:after {
+      content: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2362575/checkmark.svg');
+      position: absolute;
+      left: 9px;
+      line-height: 0.8;
+      color: #09ad7e;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+  }
+}
