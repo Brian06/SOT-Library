@@ -1,0 +1,373 @@
+.bv-input {
+  font-family: "Lato", sans-serif;
+  background: #fff;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.10);
+          box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.10);
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.bv-input input, 
+.bv-input textarea, 
+.bv-input select {
+  color: #4A4A4A;
+  border: 0;
+  width: 100%;
+  height: 30px;
+  height: 100%;
+  padding: 30px 40px 8px 12px;
+  line-height: 30px;
+  font-size: 18px;
+  background: transparent;
+}
+
+.bv-input input:focus, 
+.bv-input textarea:focus, 
+.bv-input select:focus {
+  outline: none;
+}
+
+.bv-input select {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+}
+
+@-moz-document url-prefix() {
+  .bv-input select {
+    text-indent: -2px;
+  }
+}
+
+.bv-input select::-ms-expand,
+.bv-input input::-ms-reveal,
+.bv-input input::-ms-clear {
+    display: none;
+}
+
+.bv-input select:focus::-ms-value {
+  color: inherit; 
+  background: transparent;
+}
+
+/* -- placeholder -- */
+.bv-input label {
+  color: #9B9B9B;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.92px;
+  padding-left: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+  pointer-events: none;
+}
+
+/* -- placeholder transition into label -- */
+.bv-input input:focus ~ label:not(.error), 
+.bv-input input:valid:not(.optional) ~ label:not(.error),
+.bv-input input[filled="true"] ~ label:not(.error),
+.bv-input select ~ label {
+  font-size: 13px;
+  letter-spacing: 1.56px;
+  color: #4A3B8F;
+  top: -16px;
+  z-index: 2;
+  -webkit-transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+  -o-transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+}
+
+/* -- input state styles -- */
+.bv-input.active {
+  border: 1px solid #4A3B8F;
+}
+
+.bv-input.error {
+  border-color: #DC0015;
+  margin-bottom: 35px;
+}
+
+.bv-input label.error  {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #DC0015;
+  top: 75px;
+  text-align: left;
+}
+
+.bv-input--on-dark-bg label.error {
+  color: #ff523d;
+}
+
+.bv-input:not(.bv-input--multi).success > .bv-input__icon-area,
+.bv-input:not(.bv-input--multi).error > .bv-input__icon-area {
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  right: 15px;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.bv-input:not(.bv-input--multi).success > .bv-input__icon-area,
+.bv-input--multi > div.success > .bv-input__icon-area {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2362575/checkmark_copy.svg');
+}
+
+.bv-input:not(.bv-input--multi).error > .bv-input__icon-area,
+.bv-input--multi > div.error > .bv-input__icon-area {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2362575/error_x.svg');
+}
+
+.bv-input .chevron-down {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+  .bv-input {
+    height: 60px;
+    line-height: 60px;
+  }
+  .bv-input select {
+    height: 60px;
+    height: 100%;
+    padding-top: 25px;
+  }
+  .bv-input label.error {
+    top: 65px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bv-input {
+    height: 50px;
+    line-height: 50px;
+  }
+  .bv-input input {
+    padding: 22px 35px 5px 12px;
+  }
+  .bv-input select {
+    height: 50px;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+  .bv-input input:focus ~ label:not(.error), 
+  .bv-input input:valid:not(.optional) ~ label:not(.error),
+  .bv-input input[filled="true"] ~ label:not(.error),
+  .bv-input select ~ label {
+    top: -13px;
+  }
+  .bv-input label.error {
+    top: 55px;
+  }
+  .bv-input:not(.bv-input--multi) > div.success > .bv-input__icon-area,
+  .bv-input:not(.bv-input--multi) > div.error > .bv-input__icon-area {
+    top: 30%;
+  }
+}
+
+/* -----------------------------------
+--- multiple input form styles --- 
+----------------------------------- */ 
+.bv-input--multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  height: auto;
+}
+
+.bv-input--multi > div {
+    position: relative;
+    width: 100%;
+    border-right: 2px solid #ccc;
+}
+
+.bv-input--multi > div input {
+  padding: 0;
+  top: 0;
+}
+
+.bv-input--multi > div input,
+.bv-input--multi > div label {
+  padding-left: 12px;
+  margin-top: -10px;
+}
+
+.bv-input--multi select {
+  top: 0;
+  padding: 0 0 0 12px;
+}
+
+.bv-input--multi .bv-input__half-size {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.bv-input--multi > div.success > .bv-input__icon-area,
+.bv-input--multi > div.error > .bv-input__icon-area {
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  right: 15px;
+  top: 29%;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.multi-form-button-container {
+  padding-left: 0;
+
+  @media (max-width: 767px) {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 991px) {
+  .bv-input--multi {
+    height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bv-input--multi > div:nth-last-of-type(1) {
+    border-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .bv-input--multi {
+    height: 60px;
+  }
+  .bv-input--multi.error {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bv-input--multi > div.success > .bv-input__icon-area,
+  .bv-input--multi > div.error > .bv-input__icon-area {
+    top: 23%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bv-input--multi:not(.bv-input--no-collapse) {
+    padding-bottom: 0;
+  }
+  
+  .bv-input--multi:not(.bv-input--no-collapse) [class^="col-"] {
+    padding: 0
+  }
+  
+  .bv-input--multi.bv-input--no-collapse {
+    height: 50px;
+  }
+  
+  .bv-input--multi.bv-input--no-collapse > div:nth-last-of-type(1) {
+    border-right: 0;
+  }
+  
+  .bv-input--multi:not(.bv-input--no-collapse) > div {
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.10);
+            box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.10);
+    width: 100%;
+    height: 50px;
+  }
+
+  .bv-input--multi:not(.bv-input--no-collapse) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: transparent;
+    margin-bottom: 0;
+  }
+  
+  .bv-input--multi.active:not(.bv-input--no-collapse) {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  .bv-input--multi:not(.bv-input--no-collapse) > div.active {
+    border-color: #4A3B8F;
+  }
+
+  .bv-input--multi:not(.bv-input--no-collapse) > div label {
+    padding-left: 12px;
+    margin-top: 0;
+  }
+  
+  .bv-input--multi:not(.bv-input--no-collapse) > div input {
+    position: relative;
+    width: 100%;
+    top: 8px;
+    padding: 22px 40px 5px 12px;
+  }
+  .bv-input--multi:not(.bv-input--no-collapse) select {
+    left: 0;
+    height: 100%;
+    padding: 16px 45px 0px 12px;
+  }
+  
+  .bv-input--multi.error:not(.bv-input--no-collapse) {
+    margin-bottom: 0;
+  }
+  
+  .bv-input--multi:not(.bv-input--no-collapse) > div.error {
+    margin-bottom: 30px;
+    border-color: #DC0015;
+  }
+
+  .bv-input--multi:not(.bv-input--no-collapse) > div.error label.error {
+    top: 50px;
+  }
+  .bv-input--multi > div.success > .bv-input__icon-area,
+  .bv-input--multi > div.error > .bv-input__icon-area {
+    top: 15%;
+  }
+}
