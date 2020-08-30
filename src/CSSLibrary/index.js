@@ -1,2 +1,2 @@
-import './BeenVerified/styles.scss';
-import './PeopleLooker/styles.scss';
+import './BeenVerified';
+import './PeopleLooker';
