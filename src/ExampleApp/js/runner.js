@@ -33,19 +33,19 @@ const activeClassesHandler = () => {
   });
 }
 
-
-
-const initialize = () => {
-  activeClassesHandler();
-
-
+const inputValidationsHandler = () => {
   const $individualInputs = $('.bv-input input, .bv-input select');
 
   $individualInputs.on('focus', function() {
     $(this).parents('[class^=bv-input]').addClass('active');
   });
+
   $individualInputs.on('focusout', function() {
     $(this).parents('[class^=bv-input]').removeClass('active');
+  });
+
+  $('input').on('keyup', function () {
+    $(this).valid();
   });
 
   // Set data attribute to use for styling label when not a required field
@@ -133,10 +133,11 @@ const initialize = () => {
     });
   }
   validatePeople();
+}
 
-  $('input').on('keyup', function () {
-    $(this).valid();
-  });
+const initialize = () => {
+  activeClassesHandler();
+  inputValidationsHandler();
 }
 
 export { initialize };
