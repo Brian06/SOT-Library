@@ -5,3 +5,87 @@
 .text-bolder {
   font-weight: 700;
 }
+
+.bv-h1, .bv-h2, .bv-h3, .bv-h4 {
+  margin-bottom: 0.5rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.bv-h1 {
+  font-size: 60px;
+  color: #4a4a4a;
+  font-weight: 300;
+
+  @media (max-width: 991px) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 38px;
+  }
+}
+
+.bv-h2 {
+  font-size: 52px;
+  color: #4A3B8F;
+  font-weight: 300;
+
+  @media (max-width: 991px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.bv-h3 {
+  font-size: 28px;
+  color: #81B44C;
+  font-weight: bold;
+
+  @media (max-width: 991px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+
+.bv-h4 {
+  font-size: 24px;
+  color: #4a4a4a;
+
+  @media (max-width: 991px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.bv-p {
+  font-size: 18px;
+  color: #4a4a4a;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.bv-text-purple {
+  color: #4A3B8F;
+}
+.bv-text-white {
+  color: #fff;
+}
+.bv-text-green {
+  color: #81B44C;
+}
+.bv-text-grey {
+  color: #4a4a4a;
+}
