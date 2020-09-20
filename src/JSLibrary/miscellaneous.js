@@ -13,18 +13,22 @@ const googleAnalyticsTracking = (evtName, props) => {
   }
 }
 
-const googleAnalyticsTrackingCustom = (eventLabel, eventCategory, eventAction, eventValue) => {
+const googleAnalyticsTrackingCustom = (eventLabel, eventCategory, eventAction) => {
   if (typeof dataLayer !== 'undefined') {
     const gaData = {
       event: 'flow_visitor_event',
       eventLabel,
       eventCategory,
       eventAction,
-      eventValue,
     };
     dataLayer.push(gaData);
   }
 }
+
+export {
+  googleAnalyticsTracking,
+  googleAnalyticsTrackingCustom,
+};
 
 export default {
   googleAnalyticsTracking,

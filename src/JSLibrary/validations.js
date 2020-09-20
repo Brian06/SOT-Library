@@ -6,6 +6,13 @@ const noEmptySpacesOnly = value => value === '' || value.trim().length !== 0;
 
 const emptyOrletters = value => (value.trim() !== '' && /[a-z]+/i.test(value)) || (value.trim() === '');
 
+export {
+  atLeastOneLetter,
+  emptyOrletters,
+  noEmptySpacesOnly,
+  validCVV,
+};
+
 export default {
   atLeastOneLetter,
   emptyOrletters,
