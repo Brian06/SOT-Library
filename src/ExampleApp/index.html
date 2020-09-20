@@ -911,6 +911,42 @@
           <div class="tab-pane fade" id="JS-browser" role="tabpanel">
             <div class="text-center">
               <h2 class="my-4">Browser Functions</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">isMobileDevice()</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Does not need parameters</li>
+                    <li>Returns boolean True value if we are in a <strong>mobile</strong> device</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">isTabletDevice()</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Does not need parameters</li>
+                    <li>Returns boolean True value if we are in a <strong>tablet</strong> device</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">isMobileOrTablet()</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Does not need parameters</li>
+                    <li>Returns boolean True value if we are in a <strong>mobile</strong> or in a <strong>tablet</strong> device</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">setReloadPageCachePersist()</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Does not need parameters</li>
+                    <li>set a pageshow event that will restart the page if there is cache saved</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -918,6 +954,42 @@
           <div class="tab-pane fade" id="JS-validations" role="tabpanel">
             <div class="text-center">
               <h2 class="my-4">Validations Functions</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">validCVV("658")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string</li>
+                    <li>Returns true if the string has 3 or 4 characters</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">atLeastOneLetter("John")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string</li>
+                    <li>Returns true if the string has at least one letter</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">noEmptySpacesOnly("John")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string</li>
+                    <li>Returns false if the string has just spaces</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">emptyOrletters("John")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string</li>
+                    <li>Returns true if the string is empty or if just have letters</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -925,6 +997,27 @@
            <div class="tab-pane fade" id="JS-misc" role="tabpanel">
             <div class="text-center">
               <h2 class="my-4">Miscellaneous Functions</h2>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">googleAnalyticsTracking("Subscribe Page")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string, is the event label</li>
+                    <li>Param 2 is optional, is an object with props</li>
+                    <li>Register an event in google analytics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="element-card mb-5 p-3">
+                <h5 class="mb-4">googleAnalyticsTrackingCustom("Button Click", "vin lookup", "Loading screen")</h5>
+                <div class="mb-3 text-left">
+                  <ul>
+                    <li>Param 1 must be a string, is the event label</li>
+                    <li>Param 2 is the event category</li>
+                    <li>Param 3 is the event action</li>
+                    <li>Register an event in google analytics</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

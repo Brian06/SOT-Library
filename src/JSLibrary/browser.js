@@ -24,6 +24,13 @@ const setReloadPageCachePersist = () => {
   });
 }
 
+export {
+  isMobileDevice,
+  isMobileOrTablet,
+  isTabletDevice,
+  setReloadPageCachePersist,
+}
+
 export default {
   isMobileDevice,
   isMobileOrTablet,
