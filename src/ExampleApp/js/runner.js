@@ -3,6 +3,7 @@ const activeClassesHandler = () => {
     '.js-BeenVerified-list a',
     '.js-PeopleLooker-list a',
     '.js-JavaScript-list a',
+    '.js-versions-list a'
   ];
   const selectors = optionsSelectors.join(', ');
 
@@ -17,6 +18,8 @@ const activeClassesHandler = () => {
       '.js-PeopleLooker-list a',
       '.js-JavaScript-nav',
       '.js-JavaScript-list a',
+      '.js-versions-nav',
+      '.js-versions-list a',
     ];
     const selectors = selectorsToChange.join(', ');
     $(currentElement).tab('show');
@@ -29,6 +32,8 @@ const activeClassesHandler = () => {
       $('.js-PeopleLooker-nav').addClass('active');
     } else if (currentParent.hasClass('js-JavaScript-nav')) {
       $('.js-JavaScript-nav').addClass('active');
+    } else if (currentParent.hasClass('js-versions-nav')) {
+      $('.js-versions-nav').addClass('active');
     }
   });
 }
